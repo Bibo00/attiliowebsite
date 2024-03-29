@@ -14,9 +14,10 @@
         <nav class="nav">
             <div class="header-elements">
                 <a href="#">Home</a>
-                <a href="#">Menu</a>
-                <a href="#">Risotrante</a>
-                <a href="#">Chi Siamo</a>
+                <a href="#">Spiaggia</a>
+                <a href="menu.html">Ristorante</a>
+                <a href="#">Recensioni</a>
+                <a href="#">Chi Siamo?</a>
             </div>
             
         </nav>
@@ -31,32 +32,6 @@
     <!--script for icons-->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var menuIcon = document.getElementById('menu-icon');
-            var nav = document.querySelector('.nav');
-
-            menuIcon.addEventListener('click', function() {
-                if (nav.classList.contains('side-menu')) {
-                    nav.classList.remove('side-menu');
-                    nav.classList.add('hide');
-                    
-                } else {
-                    nav.classList.remove('hide');
-                    nav.classList.add('side-menu');
-                    menuIcon.classList.add('hide');
-                }
-            });
-
-            document.addEventListener('click', function(event) {
-                var isMenuIconClicked = menuIcon.contains(event.target);
-                if (!isMenuIconClicked) {
-                    menuIcon.classList.remove('hide');
-                    nav.classList.add('hide');
-                }
-            });
-        });
-
-    </script>
+    <script src="header.js"></script>
 </body>
 </html>
