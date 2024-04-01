@@ -70,7 +70,7 @@
     z-index: -1;
 }
 
-@media screen and (max-height: 1100px){
+@media screen and (max-height: 1050px){
     .dishes{
         margin-top: 100px;
     }
@@ -108,5 +108,25 @@
     }
     .antipasti ul:before{
         font-size: 2.2em;
+    }
+}
+@media screen and (max-height: 600px){
+    .wallpapers *{
+        height: 120vh;
+    }
+}
+@media screen and (max-height: 510px){
+    .wallpapers *{
+        height: 140vh;
+    }
+}
+@media screen and (max-height: 430px){
+    .wallpapers *{
+        height: 160vh;
+    }
+}
+@media screen and (max-height: 380px){
+    .wallpapers *{
+        height: 170vh;
     }
 }
