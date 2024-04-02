@@ -42,6 +42,8 @@
     font-size: 4em;
     font-weight: bold;
     color: white;
+    /*text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+               1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;*/
 }
 .princ-title, .second-title{
     list-style: none;
@@ -49,6 +51,9 @@
     font-optical-sizing: auto;
     font-style: italic;
     color: white;
+    font-weight: 500;
+    /*text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+               1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;*/
 }
 .princ-title{
     font-size: var(--font-princ-size);
@@ -68,6 +73,7 @@
     width: 100%;
     object-fit: cover;
     z-index: -1;
+    filter: brightness(70%);
 }
 
 @media screen and (max-height: 1050px){
