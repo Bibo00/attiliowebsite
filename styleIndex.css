@@ -12,6 +12,12 @@ body {
   min-height: 100vh;
 }
 
+body nav{
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
 .container {
   width: 100%;
   margin: auto;
@@ -20,6 +26,7 @@ body {
 .navbar {
   width: 100%;
   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+  background-color: transparent;
 }
 
 .nav-container {
@@ -60,8 +67,8 @@ body {
   display: block;
   height: 32px;
   width: 32px;
-  top: 20px;
-  right: 20px;
+  top: 50px;
+  right: 80px;
   z-index: 5;
   opacity: 0;
   cursor: pointer;
@@ -72,8 +79,8 @@ body {
   height: 26px;
   width: 32px;
   position: absolute;
-  top: 17px;
-  right: 20px;
+  top: 50px;
+  right: 80px;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -85,7 +92,7 @@ body {
   height: 4px;
   width: 100%;
   border-radius: 10px;
-  background: #0e2431;
+  background: #fff;
 }
 
 .nav-container .hamburger-lines .line1 {
@@ -123,10 +130,21 @@ body {
 
 .logo {
   position: absolute;
-  top: 5px;
-  left: 15px;
-  font-size: 1.2rem;
-  color: #0e2431;
+  left: 50px;
+  /*font-size: 2em;
+  color: #fff;*/
+  width: 200px;
+}
+.logo img{
+    width: 100%;
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line {
+    background: #0e2431;
+}
+
+.nav-container input[type="checkbox"]:checked ~ .logo {
+    color: #0e2431;
 }
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
@@ -152,24 +170,6 @@ body {
 
 
 
-
-.hide{
-    opacity: 0;
-    width: 0;
-    height: 0;
-    display: none;
-}
-.scroll-image{
-    width: 100%;
-}
-.scroll-image *{
-    height: 100vh;
-    width: 100%;
-    object-fit: cover;
-    transition: ease-in 1s;
-}
-
-
 @media screen and (max-height: 700px){
     .navbar .nav-container a{
         font-size: 1em;
@@ -181,6 +181,23 @@ body {
 @media screen and (max-height: 500px){
     .navbar .menu-items {
         padding-top: 80px;
+    }
+    .nav-container{
+        height: 40px;
+    }
+    .nav-container .hamburger-lines .line {
+        height: 2px;
+    }
+    .nav-container .hamburger-lines {
+    height: 18px;
+    width: 26px;
+    position: absolute;
+    top: 11px;
+    right: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     }
 }
 @media screen and (max-height: 380px){

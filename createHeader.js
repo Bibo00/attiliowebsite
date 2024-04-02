@@ -17,8 +17,8 @@ for (let index = 1; index < 4; index++) {
 }
 const logo = document.createElement('div');
 logo.classList.add('logo');
-const h1 = document.createElement('h1');
-h1.textContent = 'Attilio';
+const img = document.createElement('img');
+img.setAttribute('src', './logo.png');
 const menuItems = document.createElement('div');
 menuItems.classList.add('menu-items');
 const numMenuItems = 4;
@@ -46,7 +46,7 @@ for (let index = 0; index < numMenuItems; index++) {
   link.appendChild(anchor);
   menuItems.appendChild(link);
 }
-logo.appendChild(h1);
+logo.appendChild(img);
 container.appendChild(checkbox);
 container.appendChild(hamburgerLines);
 container.appendChild(logo);
