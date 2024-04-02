@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
     var menuIcon = document.getElementById('checkbox');
     var container = document.querySelector('.container-tot');
 
@@ -16,5 +16,5 @@ document.addEventListener('DOMContentLoaded', function() {
             menuIcon.classList.remove('hide');
             nav.classList.add('hide');
         }
-    });*/
-});
+    });
+});*/
