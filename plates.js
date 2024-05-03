@@ -1,0 +1,115 @@
+export const plates = [
+    { title: 'Antipasti', data: [
+        { plateTitle: 'Antipasto', description: 'di pesce freddo' },
+        { plateTitle: 'Antipasto attilio', description: 'di pesce caldo e freddo' },
+        { plateTitle: 'Alici farcite', description: 'con scarola su salsa', extraDescription: 'di prezzemolo e acciughe' },
+        { plateTitle: 'Alici marinate' },
+        { plateTitle: 'Soutè', description: 'di cozze e vongole' },
+        { plateTitle: 'Tempura', description: 'di gamberoni al cacao', extraDescription: 'su vellutata di verdure' },
+        { plateTitle: 'Crostini misti' }
+    ]},
+    { title: 'Primi', data: [
+        { plateTitle: 'Spaghetti', description: 'allo scoglio' },
+        { plateTitle: 'Spaghetti', description: 'alle vongole' },
+        { plateTitle: 'Spaghetti', description: 'all\amatriciana di mare' },
+        { plateTitle: 'Spaghetti', description: 'alla carbonara di mare' },
+        { plateTitle: 'Tagliatelle', description: 'con cernia, pomodorini', extraDescription: 'e crema di pecorino' },
+        { plateTitle: 'Gnocchi di patate', description: 'mare e monti' },
+        { plateTitle: 'Gnocchi di semolino', description: 'con vellutata di gamberi' },
+        { plateTitle: 'Risotto', description: 'alla marinara' },
+        { plateTitle: 'Risotto', description: 'con cozze e zafferano', extraDescription: 'al profumo di cardamomo' },
+        { plateTitle: 'Ravioli di pesce' }
+    ]},
+    { title: 'Secondi', data : [
+        {subTitle: 'Di pesce', data: [
+            { plateTitle: 'Frittura mista', description: 'dell\'adriatico' },
+            { plateTitle: 'Grigliata mista', description: 'dell\'adriatico' },
+            { plateTitle: 'Guazzetto leggero', description: 'di vongole e cozze su crostini', extraDescription:'di pane integrale' },
+            { plateTitle: 'Spiedini', description: 'di calamari e gamberetti', extraDescription:'alla griglia' },
+            { plateTitle: 'Salmone croccante', description: 'con noci pinoli e insalatina' },
+            { plateTitle: 'Trancio di merluzzo', description: 'in crosta di patate' }
+        ]}, 
+        {subTitle: 'Di carne', data: [
+            { plateTitle: 'Cotoletta', description: 'di manzo o pollo alla milanese', extraDescription: 'con patate fritte' },
+            { plateTitle: 'Barchetta di pollo', description: 'con verdure' },
+        ]}, 
+    ]},
+    { title: 'Contorni e Insalate', data: [
+        { plateTitle: 'Insalata Diana', description: 'lattuga, rucola, noci', extraDescription: 'arancia, parmigiano' },
+        { plateTitle: 'Insalata Attilio', description: 'lattuga, rucola, gamberetti', extraDescription: 'funghi, pomodorini' },
+        { plateTitle: 'Insalata Emilio', description: 'lattuga, pomodoro, tonno', extraDescription: 'cipolla, mais' },
+        { plateTitle: 'Insalata Capricciosa', description: 'lattuga, carota, sedano', extraDescription: 'mais, radicchio, limone'  },
+        { plateTitle: 'Insalata Mista' },
+        { plateTitle: 'Verdure Gratinate' },
+        { plateTitle: 'Olive Ascolane' },
+        { plateTitle: 'Patatine Fritte' },
+    ]},
+    { title: 'Pizze Rosse', data: [
+        { plateTitle: 'Margherita', description: 'pomodoro, mozzarella, basilico'},
+        { plateTitle: 'Bufalina', description: 'pomodoro, mozzarella di bufala, basilico'},
+        { plateTitle: 'Quattro Stagioni', description: 'pomodoro, mozzarella, carciofini', extraDescription: 'funghi, cotto, acciughe' },
+        { plateTitle: 'Capricciosa', description: 'pomodoro, mozzarella, cotto', extraDescription: 'carciofini, funghi, olive nere' },
+        { plateTitle: 'Napoletana', description: 'pomodoro, mozzarella, alici, capperi' },
+        { plateTitle: 'Marinara', description: 'pomodoro, aglio, origano' },
+        { plateTitle: 'Ai Frutti di Mare', description: 'pomodoro, frutti di mare' },
+        { plateTitle: 'Parmigiana ', description: 'pomodoro, mozzarella, parmigiano', extraDescription: 'melanzane' },
+        { plateTitle: 'Tedesca', description: 'pomodoro, mozzarella, wurstel'},
+        { plateTitle: 'Diavola', description: 'pomodoro, mozzarella', extraDescription: 'salame piccante, peperoncino' },
+        { plateTitle: 'Della Casa', description: 'pomodoro, mozzarella, salsiccia', extraDescription: 'cipolla, parmigiano, peperoncino' },
+        { plateTitle: 'Serenella', description: 'pomodoro, funghi freschi', extraDescription: 'aglio, prezzemolo' },
+        { plateTitle: 'Pugliese', description: 'pomodoro, mozzarella, cipolla', extraDescription: 'olive nere' },
+        { plateTitle: 'Mare e Monti', description: 'pomodoro, mozzarella, gamberi', extraDescription: 'funghi freschi, prezzemolo' },
+        { plateTitle: 'Gustosa', description: 'pomodoro, mozzarella, radicchio', extraDescription: 'salame piccante, gorgonzola' },
+        { plateTitle: 'Strampalata', description: 'pomodoro, mozzarella, radicchio', extraDescription: 'parmigiano, prezzemolo, aceto balsamico' },
+        { plateTitle: 'Spiaggia Libera', description: 'pomodoro, tonno, olive, capperi', extraDescription: 'basilico, pomodoro fresco a crudo' },
+        { plateTitle: 'Quelo', description: 'pomodoro, mozzarella', extraDescription: 'scamorza, pomodorini, speck' },
+        { plateTitle: 'Rosy', description: 'pomodoro, mozzarella', extraDescription: 'scamorza, radicchio, salsiccia' },
+        { plateTitle: 'Maxi Pizze', description: 'farcite a scelta', extraDescription: '(vostra o del pizzaiolo)' },
+    ]},
+    { title: 'Pizze Bianche', data: [
+        { plateTitle: 'Italia', description: 'mozzarella, pomodoro a fette, rucola'},
+        { plateTitle: 'Quattro Formaggi', description: 'mozzarella, formaggi misti' },
+        { plateTitle: 'Ai Gamberetti', description: 'mozzarella, gamberetti', extraDescription: 'pomodorini o zucchine' },
+        { plateTitle: 'Vegetariana', description: 'mozzarella, verdure di stagione' },
+        { plateTitle: 'Al Salmone', description: 'mozzarella, salmone, rucola' },
+        { plateTitle: 'Al Tonno', description: 'mozzarella, tonno, cipolla' },
+        { plateTitle: 'Stracca', description: 'stracchino, rucola, speck' },
+        { plateTitle: 'Fresca', description: 'mozzarella, rucola, mais, pomodorini' },
+        { plateTitle: 'Attilio', description: 'mozzarella, speck o crudo', extraDescription: 'parmigiano, rucola, pomodorini' },
+        { plateTitle: 'Rustica', description: 'mozzarella, funghi, speck, crudo' },
+        { plateTitle: 'Caprese', description: 'pomodoro fresco, mozzarella a fette' },
+        { plateTitle: 'Calzone', description: 'mozzarella, cotto, funghi' },
+        { plateTitle: 'Pizza Montanara', description: 'mozzarella, patate, salsiccia, rosmarino' },
+        { plateTitle: 'Estiva', description: 'mozzarella, limone', extraDescription: 'insalata di mare e rucola' },
+        { plateTitle: 'Orly', description: 'mozzarella, zucchine, philadelphia e noci' },
+    ]},
+    { title: 'Dolci e Frutta', data: [
+        { plateTitle: 'Crema Catalana'},
+        { plateTitle: 'Cremoso di Ricotta', description: 'mozzarella, formaggi misti' },
+        { plateTitle: 'Semifreddi vari gusti', list: [
+            {option: 'limone e fragola'},
+            {option: 'nocciola e cioccolato'},
+            {option: 'tre cioccolati'}
+        ] },
+        { plateTitle: 'Coppa di Frutta', description: 'mozzarella, verdure di stagione' },
+    ]},
+    { title: 'Bevande', data: [
+        { plateTitle: 'Birra Bionda', description: "(Alla Spina)", list: [
+            {option: 'Piccola CL 0,2'},
+            {option: 'Grande CL 0,4'},
+            {option: 'Caraffa Litro 1'}
+        ]},
+        { plateTitle: 'Coca Cola, Fanta', description: "(Alla Spina)" , list: [
+            {option: 'Piccola CL 0,2'},
+            {option: 'Media CL 0,3'},
+            {option: 'Grande CL 0,4'},
+            {option: 'Caraffa Litro 1'},
+        ] },
+        { plateTitle: 'Coca Cola, Fanta, Sprite', description: 'In lattina' },
+        { plateTitle: 'Vino', description: "Fermo o Frizzante", list: [
+            {option: 'LT 0,5'},
+            {option: 'LT 1'}
+        ]},
+        { plateTitle: 'Acqua minerale', description: 'LT 0,75' },
+    ]},
+];

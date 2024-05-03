@@ -1,44 +1,9 @@
+import { plates } from "./plates.js";
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.hero-inner');
-
-    const categories = [
-        { title: 'Antipasti', data: [
-            { plateTitle: 'Antipasto', description: 'di pesce freddo' },
-            { plateTitle: 'Antipasto attilio', description: 'di pesce caldo e freddo' },
-            { plateTitle: 'Alici farcite', description: 'con scarola su salsa', extraDescription: 'di prezzemolo e acciughe' },
-            { plateTitle: 'Alici marinate' },
-            { plateTitle: 'Soutè', description: 'di cozze e vongole' },
-            { plateTitle: 'Tempura', description: 'di gamberoni al cacao', extraDescription: 'su vellutata di verdure' },
-            { plateTitle: 'Crostini misti' }
-        ]},
-        { title: 'Primi', data: [
-            { plateTitle: 'Spaghetti', description: 'allo scoglio' },
-            { plateTitle: 'Spaghetti', description: 'alle vongole' },
-            { plateTitle: 'Spaghetti', description: 'all\amatriciana di mare' },
-            { plateTitle: 'Spaghetti', description: 'alla carbonara di mare' },
-            { plateTitle: 'Tagliatelle', description: 'con cernia, pomodorini', extraDescription: 'e crema di pecorino' },
-            { plateTitle: 'Gnocchi di patate', description: 'mare e monti' },
-            { plateTitle: 'Gnocchi di semolino', description: 'con vellutata di gamberi' },
-            { plateTitle: 'Risotto', description: 'alla marinara' },
-            { plateTitle: 'Risotto', description: 'con cozze e zafferano', extraDescription: 'al profumo di cardamomo' },
-            { plateTitle: 'Ravioli di pesce' }
-        ]},
-        { title: 'Secondi', data : [
-            {subTitle: 'Di pesce', data: [
-                { plateTitle: 'Frittura mista', description: 'dell\'adriatico' },
-                { plateTitle: 'Grigliata mista', description: 'dell\'adriatico' },
-                { plateTitle: 'Guazzetto leggero', description: 'di vongole e cozze su crostini', extraDescription:'di pane integrale' },
-                { plateTitle: 'Spiedini', description: 'di calamari e gamberetti', extraDescription:'alla griglia' },
-                { plateTitle: 'Salmone croccante', description: 'con noci pinoli e insalatina' },
-                { plateTitle: 'Trancio di merluzzo', description: 'in crosta di patate' }
-            ]}, 
-            {subTitle: 'Di carne', data: [
-                { plateTitle: 'Cotoletta', description: 'di manzo o pollo alla milanese', extraDescription: 'con patate fritte' },
-                { plateTitle: 'Barchetta di pollo', description: 'con verdure' },
-            ]}, 
-           
-        ]}
-    ];
+    
+    const categories = plates;
+    console.log(plates.data);
 
     images.forEach((image, index) => {
         const dishesContainer = document.createElement('div');
@@ -49,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const category = categories[categoryIndex];
 
         const section = document.createElement('section');
-        var plateClass = category.title.replaceAll(' ', '-');
+        var plateClass = category.title.toLocaleLowerCase().replaceAll(' ', '-');
         section.classList.add(plateClass, 'piatti');
 
         const h2 = document.createElement('h2');
@@ -68,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 subTitle.classList.add('center');
                 subTitle.classList.add(`${subTitleClass}`);
                 const h3 = document.createElement('h3');
-                console.log(plate.subTitle);
                 h3.textContent = plate.subTitle;
                 h3.classList.add('h3');
                 plate.data.forEach((pl, i) => {
@@ -104,9 +68,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 divProva.classList.add('sub-title');
                 divProva.classList.add('flex-column');
                 divProva.appendChild(h3);
-                    divProva.appendChild(subTitle);
-                    platesContainer.appendChild(divProva);
-                    platesContainer.classList.add('flex-row');
+                divProva.appendChild(subTitle);
+                platesContainer.appendChild(divProva);
+                platesContainer.classList.add('flex-row');
             } else {
                 const princTitleLi = document.createElement('li');
                 princTitleLi.classList.add('princ-title');
@@ -126,18 +90,53 @@ document.addEventListener('DOMContentLoaded', function() {
                     secondTitleLi2.textContent = plate.extraDescription;
                     plateDiv.appendChild(secondTitleLi2);
                 }
-                if(category.data.length > 7){
-                    platesContainer.classList.add('two-rows');
-                } else {
-                    platesContainer.classList.add('one-row');
+
+                if (plate.list) {
+                    const secondTitleLi2 = document.createElement('ul');
+                    plate.list.forEach((elmnt) => {
+                        const secondTitleLi3 = document.createElement('li');
+                        secondTitleLi3.classList.add('second-title');
+                        secondTitleLi3.textContent = elmnt.option;
+                        console.log(plate.list);
+                        secondTitleLi2.appendChild(secondTitleLi3);
+                    })
+                    plateDiv.appendChild(secondTitleLi2);
                 }
                 platesContainer.appendChild(plateDiv);
             }
         });
+        
         section.appendChild(h2);
         section.appendChild(platesContainer);
         dishesContainer.appendChild(section);
         
+       
+
         image.appendChild(dishesContainer);
+        /*console.log(platesContainer.parentElement.offsetHeight);
+        console.log(category.data.length);*/
+        if(category.data.subTitle){
+            var imageHeight = platesContainer.parentElement.offsetHeight + (window.innerHeight*0.1);
+        }
+        if(category.data.length > 18){
+            platesContainer.classList.add('two-rows', 'three-rows');
+            var imageHeight = platesContainer.parentElement.offsetHeight + (window.innerHeight*0.25);
+            console.log('0.35 ' + imageHeight);
+        }else if(category.data.length > 14){
+            platesContainer.classList.add('two-rows', 'three-rows');
+            var imageHeight = platesContainer.parentElement.offsetHeight + (window.innerHeight*0.25);
+            console.log('0.25 ' + imageHeight);
+        }else if(category.data.length > 7){
+            platesContainer.classList.add('two-rows');
+            var imageHeight = platesContainer.parentElement.offsetHeight + (window.innerHeight*0.1);
+            console.log('0.1 ' + imageHeight);
+        }
+        else {
+            platesContainer.classList.add('one-row');
+            var imageHeight = platesContainer.parentElement.offsetHeight + (window.innerHeight*0.05);
+            console.log('0.05 ' + imageHeight);
+        }
+        console.log(imageHeight);
+        image.parentElement.style.height = `${Math.round(imageHeight)}px`;
     });
 });

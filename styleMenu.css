@@ -12,13 +12,17 @@
     height: fit-content;
     flex-direction: column;
     width: 100%;
+    position: relative;
 }
 .dishes{
     display: flex;
     justify-content: center;
-    margin-top: 120px;
+    margin-top: 50px;
     width: 100%;
     height: fit-content;
+}
+.antipasti{
+    margin-top: 120px;
 }
 .piatti{
     position: absolute;
@@ -26,7 +30,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: fit-content;
+    text-align: center;
+    width: 90%;
 }
 /*
 .antipasti ul:before{
@@ -59,8 +65,8 @@
     
     /*grid-template-columns: repeat(1, 200px);*/
     justify-content: center;
-    width: 100%;
     max-width: 700px;
+    width: fit-content;
 }
 .plates, .sub-plates{
     text-align: center;
@@ -76,10 +82,6 @@
 .h3{
     font-size: 3.5em;
 }
-.sub-plates{
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    height: 80vh;
-}
 
 .plate{
     display: flex;
@@ -91,19 +93,19 @@
 .princ-title, .second-title{
     list-style: none;
 }
-.princ-title{
-    font-size: var(--font-princ-size);
-    
-    font-weight: 500;
-}
 .sub-li-princ, .princ-title{
     margin-top: var(--base-margin);
+    font-size: var(--font-princ-size);
+    font-weight: 500;
 }
-.second-title{
+.second-title, .sub-li-sec{
     font-size: var(--font-second-size);
 }
 .sub-title{
     width: 90%;
+}
+.carne{
+    grid: none;
 }
 /*
 .plates:last-child * {
@@ -128,37 +130,49 @@
 
 .hero:nth-child(1) figure {
     background-image: url("./menu-images/various/5.jpg");
-  }
-  .hero:nth-child(2) figure {
+}
+.hero:nth-child(2) figure {
     background-image: url("./menu-images/various/1.jpg");
-  }
-  .hero:nth-child(3) figure {
+}
+.hero:nth-child(3) figure {
     background-image: url("./menu-images/various/2.jpg");
-  }
-  .hero:nth-child(4) figure {
+}
+.hero:nth-child(4) figure {
+    background-image: url("./menu-images/various/1.jpg");
+}
+.hero:nth-child(5) figure {
     background-image: url("./menu-images/various/3.jpg");
-  }
+}
 
+.hero:nth-child(6) figure {
+    background-image: url("./menu-images/various/6.jpg");
+}
+.hero:nth-child(7) figure {
+    background-image: url("./menu-images/various/1.jpg");
+}
+.hero:nth-child(8) figure {
+    background-image: url("./menu-images/various/7.jpg");
+}
 @media screen and (max-height: 1050px){
-    .dishes{
-        margin-top: 100px;
+    .antipasti{
+        margin-top: 50px;
     }
     .h3{
-        font-size: 3.2em;
+        font-size: 3em;
     }
-    .princ-title{
+    .princ-title, .sub-li-princ{
         font-size: 2em;
         margin-top: 20px;
     }
-    .second-title{
+    .sub-li-princ{
+        font-size: 1.8em;
+    }
+    .second-title, .sub-li-sec{
         font-size: 1.1em;
     }
 }
 
 @media screen and (max-height: 900px){
-    .dishes{
-        margin-top: 50px;
-    }
     .princ-title{
         font-size: 1.7em;
         margin-top: 20px;
@@ -204,18 +218,20 @@
     .second-title{
         font-size: 0.9em;
     }
-    .plates, .sub-plates{
+    .plates, .pesce{
         grid-template-columns: repeat(3, 30%);
-        grid-template-rows: repeat(3, 90px);
-    }
-    .sub-plates{
-        grid-template-rows: repeat(auto-fill, 70px);
     }
     
 }
 @media screen and (max-height: 590px){
     .piatti h2{
         font-size: 2.8em;
+    }
+    .h3{
+        font-size: 2em;
+    }
+    .antipasti{
+        margin-top: 30px;
     }
     .princ-title{
         font-size: 1.8em;
@@ -237,10 +253,9 @@
     }
     .two-rows{
         grid-template-columns: repeat(3, 30%);
-        grid-template-rows: repeat(4, 80px);
     }
 }
-@media screen and (max-height: 300px){
+@media screen and (max-height: 30px){
     .piatti h2{
         font-size: 2em;
     }
@@ -250,7 +265,7 @@
     .dishes{
         margin-top: 20px;
     }
-    .plates, .sub-plates{
+    .plates, .pesce{
         grid-template-rows: repeat(4, 50px);
     }
 }

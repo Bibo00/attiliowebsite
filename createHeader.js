@@ -35,7 +35,7 @@ for (let index = 0; index < numMenuItems; index++) {
       anchor.textContent = 'Risorante';
       break;
     case 2:
-      anchor.setAttribute('href', '#');
+      anchor.setAttribute('href', 'recensioni.html');
       anchor.textContent = 'Recensioni';
       break;
     case 3:

@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-tot{
+    width: 100vw;
+    min-height: 100vh;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.title{
+    width: 100vw;
+    text-align: center;
+}
+.title h1{
+    font-family: "Briem Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+    font-size: 10em;
+    color: white;
+}
+
+.wrapper{
+    width: 100vw;
+    height: fit-content;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.reviews{
+    display: grid;
+    width: 100%;
+    height: fit-content;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(2, 550px);
+    justify-content: space-evenly;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    min-height: 450px;
+    height: fit-content;
+    width: 400px;
+    background-color: white;
+}
+
+.box *{
+    margin-left: 30px;
+}
+
+.stars{
+    width: 200px;
+    height: auto;
+}
+
+.rev{
+    margin: 30px;
+}
+
+.rev, .usname{
+    font-family: "Outfit", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+.usname{
+    font-size: 1.5em;
+    font-weight: 550 !important;
+}
+
+@media screen and (max-width: 1500px){
+    .title{
+        margin-top: 100px;
+    }
+    .stars{
+        width: 150px;
+    }
+    .reviews{
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: repeat(2, 450px);
+    }
+    .usname{
+        font-size: 1.2em;
+    }
+    .rev{
+        font-size: 0.8em;
+    }
+    .box{
+        min-height: 350px;
+        width: 300px;
+    }
+
+}
+
+@media screen and (max-width: 1050px){
+    .title{
+        margin-top: 150px;
+    }
+    .reviews{
+        grid-template-rows: repeat(3, 550px);
+        grid-template-columns: repeat(2, 400px);
+    }
+    .usname{
+        font-size: 1.5em;
+    }
+    .rev{
+        font-size: 1em;
+    }
+    .box{
+        min-height: 430px;
+        width: 380px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .stars{
+        width: 100px;
+    }
+    .title{
+        margin-top: 200px;
+    }
+    .title h1{
+        font-size: 8em;
+    }
+    .reviews{
+        grid-template-rows: repeat(3, 450px);
+        grid-template-columns: repeat(2, 300px);
+        gap: 5em;
+    }
+    .usname{
+        font-size: 1.2em;
+    }
+    .rev{
+        font-size: 0.8em;
+    }
+    .box{
+        min-height: 350px;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .wrapper{
+        margin-top: 100px;
+    }
+    .title{
+        margin-top: 100px;
+    }
+    .title h1{
+        font-size: 5em;
+    }
+    .reviews{
+        grid-template-rows: repeat(3, 450px);
+        grid-template-columns: repeat(2, 250px);
+        gap: 1em;
+    }
+    .usname{
+        font-size: 1em;
+    }
+    .rev{
+        font-size: 0.8;
+        margin-top: 15px;
+    }
+    .box{
+        min-height: 350px;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 580px){
+    .title{
+        margin-top: 100px;
+    }
+    .title h1{
+        font-size: 5em;
+    }
+    .reviews{
+        grid-template-rows: repeat(6, 450px);
+        grid-template-columns: repeat(1, 250px);
+        gap: 1em;
+    }
+    .usname{
+        font-size: 1em;
+    }
+    .rev{
+        font-size: 0.8;
+        margin-top: 15px;
+    }
+    .box{
+        min-height: 350px;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 430px){
+    .title h1{
+        font-size: 3.5em;
+    }
+}

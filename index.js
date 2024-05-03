@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             titles.innerHTML += `<h4 class="h2">${titlesContent[index].description}</h4>`;
         }
         container.appendChild(titles);
-        if(index == heroInnerContainers.length - 1){
+        if(titlesContent[index].title == 'VIENI A TROVARCI'){
             container.appendChild(mapDiv);
             container.classList.add('hero-maps');
             container.classList.add('align-center');

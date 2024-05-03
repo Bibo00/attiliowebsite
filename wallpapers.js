@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const numImg = 5;
+    const numImg = 8;
     const container = document.createElement('div');
     container.classList.add('container-tot');
     document.body.append(container);
