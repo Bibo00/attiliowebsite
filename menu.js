@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const categories = plates;
 
-    images.forEach((image, index) => {
+    for (let index = 1; index < images.length; index++) {
         const dishesContainer = document.createElement('div');
         dishesContainer.classList.add('dishes');
 
-        const categoryIndex = index % categories.length;
+        const categoryIndex = (index - 1) % categories.length;
 
         const category = categories[categoryIndex];
 
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
        
 
-        image.appendChild(dishesContainer);
+        images[index].appendChild(dishesContainer);
         if(category.data[0].subTitle || category.data[0].list){
             var imageHeight = platesContainer.parentElement.offsetHeight + (window.innerHeight*0.1);
         }
@@ -128,6 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
             platesContainer.classList.add('one-row');
             var imageHeight = platesContainer.parentElement.offsetHeight + (window.innerHeight*0.05);
         }
-        image.parentElement.style.height = `${Math.round(imageHeight)}px`;
-    });
+        images[index].parentElement.style.height = `${Math.round(imageHeight)}px`;
+    }
 });

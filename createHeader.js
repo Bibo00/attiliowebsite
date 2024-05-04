@@ -39,7 +39,7 @@ for (let index = 0; index < numMenuItems; index++) {
       anchor.textContent = 'Recensioni';
       break;
     case 3:
-      anchor.setAttribute('href', 'spiaggia.html');
+      anchor.setAttribute('href', 'servizi.html');
       anchor.textContent = 'Servizi';
       break;
     case 4:
