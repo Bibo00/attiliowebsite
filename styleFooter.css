@@ -3,11 +3,6 @@ body{
 	line-height: 1.5;
 	font-family: 'Poppins', sans-serif;
 }
-*{
-	margin:0;
-	padding:0;
-	box-sizing: border-box;
-}
 .containerFooter{
 	max-width: 1170px;
 	margin:auto;

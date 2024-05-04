@@ -18,10 +18,10 @@ for (let index = 1; index < 4; index++) {
 const logo = document.createElement('div');
 logo.classList.add('logo');
 const img = document.createElement('img');
-img.setAttribute('src', './logo.png');
+img.setAttribute('src', './images/logo.png');
 const menuItems = document.createElement('div');
 menuItems.classList.add('menu-items');
-const numMenuItems = 4;
+const numMenuItems = 5;
 for (let index = 0; index < numMenuItems; index++) {
   const link = document.createElement('li');
   const anchor = document.createElement('a');
@@ -39,9 +39,14 @@ for (let index = 0; index < numMenuItems; index++) {
       anchor.textContent = 'Recensioni';
       break;
     case 3:
+      anchor.setAttribute('href', 'spiaggia.html');
+      anchor.textContent = 'Servizi';
+      break;
+    case 4:
       anchor.setAttribute('href', '#');
       anchor.textContent = 'Chi siamo?';
       break;
+
   }
   link.appendChild(anchor);
   menuItems.appendChild(link);

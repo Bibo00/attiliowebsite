@@ -1,7 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Courgette|Roboto");
-* {
-  box-sizing: border-box;
-}
 
 p {
   font-family: "Roboto", sans-serif;
@@ -84,27 +81,6 @@ blockquote:before {
   }
 }
 
-.hero__title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 0 1rem;
-  width: 100%;
-  height: 100%;
-  color: white;
-  font-family: "Courgette", serif;
-  font-size: 8vw;
-  letter-spacing: -0.125rem;
-  text-align: center;
-}
-@media (min-width: 1200px) {
-  .hero__title {
-    font-size: 6rem;
-  }
-}
 @media screen and (max-width: 1200px){
   .flex-row{
       gap: 2em;

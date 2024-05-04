@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+body{
+  overflow-x: hidden;
+}
+
+.container-tot{
+  position: relative;
+}
+
 .titles{
   z-index: 98;
   display: flex;
@@ -8,9 +16,7 @@
   justify-content: start;
   margin-left: 60px;
 }
-.container-tot{
-  position: relative;
-}
+
 .h1, .h2{
     color: white;
     font-family: "Playfair Display", serif;
@@ -47,19 +53,19 @@
 /*  IMAGES  */
 
 .hero:nth-child(1) figure {
-    background-image: url("front-image.jpg");
+    background-image: url("./images/front-image.jpg");
   }
   .hero:nth-child(2) figure {
-    background-image: url("alba.jpg");
+    background-image: url("./images/alba.jpg");
   }
   .hero:nth-child(3) figure {
-    background-image: url("./menu-images/various/5.jpg");
+    background-image: url("./images/menu-images/various/5.jpg");
   }
   .hero:nth-child(4) figure {
-    background-image: url("arcobaleno.jpg");
+    background-image: url("./images/arcobaleno.jpg");
   }
   .hero:nth-child(5) figure {
-    background-image: url("high-view.jpg");
+    background-image: url("./images/high-view.jpg");
   }
 
   @media screen and (max-height: 990px){
@@ -108,5 +114,10 @@
     }
     .h2{
         font-size: 1em;
+    }
+  }
+  @media screen and (max-width: 450px){
+    .titles{
+      margin-left: 20px;
     }
   }

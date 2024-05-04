@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.hero-inner');
     
     const categories = plates;
-    console.log(plates.data);
 
     images.forEach((image, index) => {
         const dishesContainer = document.createElement('div');
@@ -55,11 +54,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         secondTitleLi2.textContent = pl.extraDescription;
                         subPlateDiv.appendChild(secondTitleLi2);
                     }
-                    if(plate.data.length > 7){
+                    /*if(plate.data.length > 7){
                         subTitle.classList.add('two-rows');
                     } else {
                         subTitle.classList.add('one-row');
-                    }
+                    }*/
                     
                     subTitle.appendChild(subPlateDiv);
                     
@@ -97,7 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         const secondTitleLi3 = document.createElement('li');
                         secondTitleLi3.classList.add('second-title');
                         secondTitleLi3.textContent = elmnt.option;
-                        console.log(plate.list);
                         secondTitleLi2.appendChild(secondTitleLi3);
                     })
                     plateDiv.appendChild(secondTitleLi2);
@@ -113,30 +111,23 @@ document.addEventListener('DOMContentLoaded', function() {
        
 
         image.appendChild(dishesContainer);
-        /*console.log(platesContainer.parentElement.offsetHeight);
-        console.log(category.data.length);*/
-        if(category.data.subTitle){
+        if(category.data[0].subTitle || category.data[0].list){
             var imageHeight = platesContainer.parentElement.offsetHeight + (window.innerHeight*0.1);
         }
         if(category.data.length > 18){
             platesContainer.classList.add('two-rows', 'three-rows');
             var imageHeight = platesContainer.parentElement.offsetHeight + (window.innerHeight*0.25);
-            console.log('0.35 ' + imageHeight);
         }else if(category.data.length > 14){
             platesContainer.classList.add('two-rows', 'three-rows');
             var imageHeight = platesContainer.parentElement.offsetHeight + (window.innerHeight*0.25);
-            console.log('0.25 ' + imageHeight);
         }else if(category.data.length > 7){
             platesContainer.classList.add('two-rows');
             var imageHeight = platesContainer.parentElement.offsetHeight + (window.innerHeight*0.1);
-            console.log('0.1 ' + imageHeight);
         }
         else {
             platesContainer.classList.add('one-row');
             var imageHeight = platesContainer.parentElement.offsetHeight + (window.innerHeight*0.05);
-            console.log('0.05 ' + imageHeight);
         }
-        console.log(imageHeight);
         image.parentElement.style.height = `${Math.round(imageHeight)}px`;
     });
 });

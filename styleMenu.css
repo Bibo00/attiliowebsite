@@ -34,19 +34,6 @@
     text-align: center;
     width: 90%;
 }
-/*
-.antipasti ul:before{
-    content: attr(aria-label);
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 4em;
-    font-weight: bold;
-    color: white;
-    /*text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
-               1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
-}*/
 .piatti h2, .princ-title, .second-title, .h3,
 .sub-li-princ, .sub-li-sec {
     list-style: none;
@@ -62,8 +49,6 @@
 }
 .plates{
     height: fit-content;
-    
-    /*grid-template-columns: repeat(1, 200px);*/
     justify-content: center;
     max-width: 700px;
     width: fit-content;
@@ -129,29 +114,29 @@
 /*  IMAGES  */
 
 .hero:nth-child(1) figure {
-    background-image: url("./menu-images/various/5.jpg");
+    background-image: url("./images/menu-images/various/5.jpg");
 }
 .hero:nth-child(2) figure {
-    background-image: url("./menu-images/various/1.jpg");
+    background-image: url("./images/menu-images/various/1.jpg");
 }
 .hero:nth-child(3) figure {
-    background-image: url("./menu-images/various/2.jpg");
+    background-image: url("./images/menu-images/various/2.jpg");
 }
 .hero:nth-child(4) figure {
-    background-image: url("./menu-images/various/1.jpg");
+    background-image: url("./images/menu-images/various/1.jpg");
 }
 .hero:nth-child(5) figure {
-    background-image: url("./menu-images/various/3.jpg");
+    background-image: url("./images/menu-images/various/3.jpg");
 }
 
 .hero:nth-child(6) figure {
-    background-image: url("./menu-images/various/6.jpg");
+    background-image: url("./images/menu-images/various/6.jpg");
 }
 .hero:nth-child(7) figure {
-    background-image: url("./menu-images/various/1.jpg");
+    background-image: url("./images/menu-images/various/1.jpg");
 }
 .hero:nth-child(8) figure {
-    background-image: url("./menu-images/various/7.jpg");
+    background-image: url("./images/menu-images/various/7.jpg");
 }
 @media screen and (max-height: 1050px){
     .antipasti{
