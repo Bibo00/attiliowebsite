@@ -13,7 +13,7 @@ row.classList.add("row");
 // Dati delle colonne del footer
 const footerCols = [
   { title: "Chiamaci", links: [{ text: "about us", href: "tel: 3271188807", icon: "call-outline" }] },
-  { title: "Mail", links: [{ text: "attilio.diocane.it", href: "#", icon: "mail-outline" }] },
+  { title: "Mail", links: [{ text: "attilio@gmail.com", href: "#", icon: "mail-outline" }] },
   { title: "Servizi", links: [{ text: "Spiaggia", href: "#" }, { text: "Ristorante", href: "#" }] },
   { title: "follow us", icons: ["fa-facebook-f", "fa-twitter", "fa-instagram", "fa-linkedin-in"] }
 ];
